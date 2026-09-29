@@ -8,6 +8,24 @@ llama.cpp contributors, licensed under the MIT License. Its license text is
 included as `LLAMA_CPP_LICENSE` in this directory. Source:
 <https://github.com/ggml-org/llama.cpp/tree/b11174>.
 
+The bundled `libomp.dll` from the llama.cpp Windows package is LLVM OpenMP,
+licensed under Apache License 2.0 with LLVM Exceptions. The complete text from
+the same pinned package is included as `LICENSE-LLVM-OpenMP`.
+
+The bundled speech-recognition runtime (`transcribe.dll` and its ggml DLLs)
+comes from `transcribe-cpp` 0.2.3 and `transcribe-cpp-sys` 0.2.3, including
+ggml and miniz. Their license texts are included as
+`TRANSCRIBE_CPP_LICENSE`, `GGML_LICENSE`, and `MINIZ_LICENSE`.
+Source: <https://github.com/handy-computer/transcribe.cpp>.
+
+The bundled `silero_vad_v4.onnx` voice activity model is from Silero VAD
+under the MIT License. Its text is included as `SILERO_VAD_LICENSE`.
+Source: <https://github.com/snakers4/silero-vad>.
+
+ONNX Runtime is used for ONNX model execution under the MIT License. Its
+license text is included as `ONNX_RUNTIME_LICENSE`.
+Source: <https://github.com/microsoft/onnxruntime>.
+
 The standard speech-recognition model is
 `handy-computer/whisper-large-v3-turbo-gguf`, distributed separately under
 Apache License 2.0:
