@@ -9,5 +9,6 @@ Windows 11 向け日本語音声入力アプリの試験版です。インスト
 - [利用規約](TERMS.md)
 - [ライセンスとモデルの出典](THIRD_PARTY_NOTICES.md)
 - [モデルの検証値](MODELS.md)
+- [インストーラーの SHA-256](SHA256SUMS.txt)
 
 問い合わせ: [メール](mailto:pandamaru.marke@gmail.com) / [Discord](https://discord.gg/9PSheBcCX)
