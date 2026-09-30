@@ -1,4 +1,4 @@
-# KotoType 0.9.7 試験版
+# KotoType 0.9.8 試験版
 
 更新日: 2026-09-30
 
@@ -7,12 +7,13 @@ Windows 11 向けの日本語音声入力アプリです。初回起動時に PC
 ## 確認済みの範囲
 
 - Windows 11 build 26200、メモリ 27GB、RTX 5060 Ti 15GB、D: のモデル保存領域で、初回設定から登録済み主画面まで確認しました。
-- 製品 CLI と実音声 5 分相当の回帰では、固有名詞 16/16、確定事実の欠落 0、撤回語の残留 0、整形 guard PASS でした。
+- 製品 CLI と実音声 5 分相当の回帰では、文字誤り率（CER）6.847%、固有名詞 16/16、確定事実の欠落 0、撤回語の残留 0、整形 guard PASS でした。Debug 2 回、Release 1 回、インストール版 1 回で同じ値を確認しています。開発工程 T-12 の 8% 基準と製品試験の 15% 基準を達成しました。
 - この確認は 1 台の PC で行ったものです。
 
 ## 未達・未確認
 
-- 開発工程 T-12 の文字誤り率（CER）8% 以下は未達です。Debug 構成で 8.369% と 8.453%、Release 構成の独立した 2 回でいずれも 8.284% を確認しました。製品試験の別基準 15% 以下は達成しています。認識・整形の結果は利用者が確認してください。
+- 5 分間の研究音声で精度を測定しています。実際の話し方やマイクで同じ精度が出るとは限りません。認識・整形の結果は利用者が確認してください。
+- 別の3分音声では整形後の内容保持検査に失敗し、認識結果へ差し戻しました。長めの発話では整形が適用されない場合があります。
 - Windows 10 は対象外です。Windows 10 実機での拒否動作、NEC LAVIE、独立した初回利用者、実 USB マイクでの Q-4/Q-6 は未確認です。
 - 整形エンジンを GUI と回帰 CLI で同時に動かしたとき、CLI 側が完了しない事例がありました。試験版では並行起動を避けてください。
 - 方式 A の約 7.1GB の整形モデルは、現時点でアプリから自動取得できません。事前にモデルを正しい保存先へ配置した PC でのみ選べます。新しい PC では方式 B または C を選び、利用者自身の Gemini API キーを設定してください。Gemini へ送る内容と費用は Google の条件に従います。
@@ -21,7 +22,7 @@ Windows 11 向けの日本語音声入力アプリです。初回起動時に PC
 
 ## 導入
 
-1. このページのインストーラー `KotoType_0.9.7_x64-setup.exe` をダウンロードし、SHA-256 `a4c16ea7d8f42ebf1a236fce4f1a6efedf78e0ea850d8402e8e67baf7375bad1` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.7/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.7_x64-setup.exe -Algorithm SHA256` を使えます。
+1. このページのインストーラー `KotoType_0.9.8_x64-setup.exe` をダウンロードし、SHA-256 `0b56c60801b307f85820025e06af4f87a307da2f388c230d6ff7e78cf72fe840` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.8/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.8_x64-setup.exe -Algorithm SHA256` を使えます。
 2. Windows 11 でインストーラーを起動します。初回診断で表示されるモデル保存先と空き容量を確認します。
 3. 方式 B または C を選びます。初回の認識モデルは約 886MB をダウンロードします。途中で通信が切れた場合は再試行できます。
 4. アプリの登録画面から、事前に承認された Google アカウントでログインします。
