@@ -1,8 +1,10 @@
-# KotoType 0.9.9 試験版
+# KotoType 0.9.10 試験版
 
-更新日: 2026-10-01
+更新日: 2026-10-02
 
-Windows 11 向けの日本語音声入力アプリです。初回起動時に PC の診断、方式選択、Google アカウントの登録確認を行います。現在の Google OAuth 設定では、運営者が事前にテストユーザーへ追加し、利用登録を承認したアカウントだけがログインできます。参加希望や不具合は [問い合わせ先](mailto:pandamaru.marke@gmail.com)へ連絡してください。
+Windows 11 向けの日本語音声入力アプリです。
+
+Windows 版では、音声入力を終了した時に他アプリが一時的にクリップボードを使っていても、最大1秒間は再試行して現在の入力欄への貼り付けを継続します。アプリ本体には、選定済みの「マイク＋文字線」アイコンを同梱しています。初回起動時に PC の診断、方式選択、Google アカウントの登録確認を行います。現在の Google OAuth 設定では、運営者が事前にテストユーザーへ追加し、利用登録を承認したアカウントだけがログインできます。参加希望や不具合は [問い合わせ先](mailto:pandamaru.marke@gmail.com)へ連絡してください。
 
 ## 確認済みの範囲
 
@@ -22,7 +24,7 @@ Windows 11 向けの日本語音声入力アプリです。初回起動時に PC
 
 ## 導入
 
-1. このページのインストーラー `KotoType_0.9.9_x64-setup.exe` をダウンロードし、SHA-256 `84962a178a31b2beb35fa20e2c8f6776c22d1f7493e85edea754c3d8f7dbf95f` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.9/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.9_x64-setup.exe -Algorithm SHA256` を使えます。
+1. このページのインストーラー `KotoType_0.9.10_x64-setup.exe` をダウンロードし、SHA-256 `4eae52cb1e7bc10fc332512ab6079bb1e7e8662c94b8482113ceea2a23a071fe` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.10/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.10_x64-setup.exe -Algorithm SHA256` を使えます。
 2. Windows 11 でインストーラーを起動します。初回診断で表示されるモデル保存先と空き容量を確認します。
 3. 方式 B または C を選びます。初回の認識モデルは約 886MB をダウンロードします。途中で通信が切れた場合は再試行できます。
 4. アプリの登録画面から、事前に承認された Google アカウントでログインします。
