@@ -1,6 +1,6 @@
-# KotoType 0.9.10 試験版
+# KotoType 0.9.11 試験版
 
-更新日: 2026-10-02
+更新日: 2026-10-03
 
 Windows 11 向けの日本語音声入力アプリです。
 
@@ -24,7 +24,7 @@ Windows 版では、音声入力を終了した時に他アプリが一時的に
 
 ## 導入
 
-1. このページのインストーラー `KotoType_0.9.10_x64-setup.exe` をダウンロードし、SHA-256 `4eae52cb1e7bc10fc332512ab6079bb1e7e8662c94b8482113ceea2a23a071fe` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.10/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.10_x64-setup.exe -Algorithm SHA256` を使えます。
+1. このページのインストーラー `KotoType_0.9.11_x64-setup.exe` をダウンロードし、SHA-256 `46c4e7c64bcd6e2124227dc6af03a44af4a3acb8feefa9143b018a1b37cec408` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.11/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.11_x64-setup.exe -Algorithm SHA256` を使えます。
 2. Windows 11 でインストーラーを起動します。初回診断で表示されるモデル保存先と空き容量を確認します。
 3. 方式 B または C を選びます。初回の認識モデルは約 886MB をダウンロードします。途中で通信が切れた場合は再試行できます。
 4. アプリの登録画面から、事前に承認された Google アカウントでログインします。
