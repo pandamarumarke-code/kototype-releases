@@ -1,47 +1,31 @@
-# KotoType 0.9.11 試験版
+# KotoType v0.9.12 試験版
 
 更新日: 2026-10-03
 
-Windows 11 向けの日本語音声入力アプリです。
+Windows 11 x64 向けの試験版です。Windows 10 は対象外です。
 
-Windows 版では、音声入力を終了した時に他アプリが一時的にクリップボードを使っていても、最大1秒間は再試行して現在の入力欄への貼り付けを継続します。アプリ本体には、選定済みの「マイク＋文字線」アイコンを同梱しています。初回起動時に PC の診断、方式選択、Google アカウントの登録確認を行います。現在の Google OAuth 設定では、運営者が事前にテストユーザーへ追加し、利用登録を承認したアカウントだけがログインできます。参加希望や不具合は [問い合わせ先](mailto:pandamaru.marke@gmail.com)へ連絡してください。
+## この版で直したこと
 
-## 確認済みの範囲
+- 通常の音声入力ショートカットでも、文章の整え方が「この PC」または Gemini のときは整形後の文を貼り付けます。
+- 「整形しない」を選んだ場合だけ、生の文字起こしを貼り付けます。
 
-- Windows 11 build 26200、メモリ 27GB、RTX 5060 Ti 15GB、D: のモデル保存領域で、初回設定から登録済み主画面まで確認しました。
-- 製品 CLI と実音声 5 分相当の回帰では、文字誤り率（CER）6.847%、固有名詞 16/16、確定事実の欠落 0、撤回語の残留 0、整形 guard PASS でした。Debug 2 回、Release 1 回、インストール版 1 回で同じ値を確認しています。開発工程 T-12 の 8% 基準と製品試験の 15% 基準を達成しました。
-- この確認は 1 台の PC で行ったものです。
+## 配布ファイル
 
-## 未達・未確認
+`KotoType_0.9.12_x64-setup.exe`
 
-- 5 分間の研究音声で精度を測定しています。実際の話し方やマイクで同じ精度が出るとは限りません。認識・整形の結果は利用者が確認してください。
-- 別の3分音声では整形後の内容保持検査に失敗し、認識結果へ差し戻しました。長めの発話では整形が適用されない場合があります。
-- Windows 10 は対象外です。Windows 10 実機での拒否動作、NEC LAVIE、独立した初回利用者、実 USB マイクでの Q-4/Q-6 は未確認です。
-- 整形エンジンを GUI と回帰 CLI で同時に動かしたとき、CLI 側が完了しない事例がありました。試験版では並行起動を避けてください。
-- 方式 A の約 7.1GB の整形モデルは、現時点でアプリから自動取得できません。事前にモデルを正しい保存先へ配置した PC でのみ選べます。新しい PC では方式 B または C を選び、利用者自身の Gemini API キーを設定してください。Gemini へ送る内容と費用は Google の条件に従います。
-- Google の同意画面はテスト中です。事前登録されていない Google アカウントではログインできません。
-- Windows のコード署名は付いていません。初回インストール時に SmartScreen の確認が表示される場合があります。配布ページの SHA-256 とダウンロードしたファイルを照合してください。
+SHA-256:
+`d23cef98b6e2ddf9f385427f7d80a109c2fbeb1f774a904eb852fe7ee1bf09be`
 
-## 導入
+[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.12/SHA256SUMS.txt)
 
-1. このページのインストーラー `KotoType_0.9.11_x64-setup.exe` をダウンロードし、SHA-256 `46c4e7c64bcd6e2124227dc6af03a44af4a3acb8feefa9143b018a1b37cec408` と照合します。[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.11/SHA256SUMS.txt) も配布しています。PowerShell では `Get-FileHash .\KotoType_0.9.11_x64-setup.exe -Algorithm SHA256` を使えます。
-2. Windows 11 でインストーラーを起動します。初回診断で表示されるモデル保存先と空き容量を確認します。
-3. 方式 B または C を選びます。初回の認識モデルは約 886MB をダウンロードします。途中で通信が切れた場合は再試行できます。
-4. アプリの登録画面から、事前に承認された Google アカウントでログインします。
-5. Gemini を使う前にアプリ内の同意表示と Google の料金条件を確認し、自分の API キーを設定します。
+PowerShell で確認する場合:
 
-方式 A のモデルを手動で導入する検証者には、運営者が別途モデルの取得元、4 ファイルの SHA-256、保存先、必要容量を案内します。D: など別ドライブを使う場合も、空き容量と保存先を確認してください。
+```powershell
+Get-FileHash .\KotoType_0.9.12_x64-setup.exe -Algorithm SHA256
+```
 
-Handy からの設定移行は保証していません。既存の設定や辞書は書き出して保管してください。パスワード欄や機密情報、送信前の確認を要する文書には使わないでください。
+## 既知の条件
 
-## データとライセンス
-
-- [プライバシーポリシー](PRIVACY.md)
-- [利用規約](TERMS.md)
-- [第三者ソフトウェアとモデルの表示](THIRD_PARTY_NOTICES.md)
-- [モデルの取得元と SHA-256](MODELS.md)
-- [Apache License 2.0](APACHE-2.0.txt)
-- [Handy MIT License](LICENSE)
-- [llama.cpp MIT License](LLAMA_CPP_LICENSE)
-
-音声・文字起こし本文・API キーを不具合報告に添付する前に、必要な箇所を伏せてください。問い合わせは [メール](mailto:pandamaru.marke@gmail.com)または [Discord](https://discord.gg/9PSheBcCX) で受け付けます。
+- Gemini を使うには、Google ログインとは別に Google AI Studio の Gemini API キー登録が必要です。
+- USB マイクの長時間入力、CER 8% 基準、NEC LAVIE は未検証です。
+- 初回起動時に SmartScreen が表示される場合があります。
