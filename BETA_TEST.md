@@ -1,31 +1,31 @@
-# KotoType v0.9.12 試験版
+# KotoType v0.9.13 試験版配布
 
-更新日: 2026-10-03
+公開日: 2026-10-03
 
 Windows 11 x64 向けの試験版です。Windows 10 は対象外です。
 
 ## この版で直したこと
 
-- 通常の音声入力ショートカットでも、文章の整え方が「この PC」または Gemini のときは整形後の文を貼り付けます。
-- 「整形しない」を選んだ場合だけ、生の文字起こしを貼り付けます。
+- ローカル整形時に「一旦」が「1旦」と扱われて安全ガードにより整形全体が破棄され、句読点が入らなくなる問題を修正しました。文章はローカル整形のまま貼り付けます。
+- 初回更新時に「録音中はスピーカーを消音」を有効化します。録音開始で既定の再生デバイスを消音し、終了時に開始前の消音状態へ戻します。設定画面で切り替えられます。
 
 ## 配布ファイル
 
-`KotoType_0.9.12_x64-setup.exe`
+`KotoType_0.9.13_x64-setup.exe`
 
 SHA-256:
-`d23cef98b6e2ddf9f385427f7d80a109c2fbeb1f774a904eb852fe7ee1bf09be`
+`b0ad73c8d051a9dea5f04d0d7b1542e860f7795769a3eb4a40fa981687510133`
 
-[SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/releases/download/v0.9.12/SHA256SUMS.txt)
+[GitHub Releases: v0.9.13](https://github.com/pandamarumarke-code/kototype-releases/releases/tag/v0.9.13)
 
 PowerShell で確認する場合:
 
 ```powershell
-Get-FileHash .\KotoType_0.9.12_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\KotoType_0.9.13_x64-setup.exe -Algorithm SHA256
 ```
 
-## 既知の条件
+## 未完了の確認
 
-- Gemini を使うには、Google ログインとは別に Google AI Studio の Gemini API キー登録が必要です。
-- USB マイクの長時間入力、CER 8% 基準、NEC LAVIE は未検証です。
-- 初回起動時に SmartScreen が表示される場合があります。
+- 実マイクでの長文入力、整形結果、録音中のスピーカー消音と復帰は、利用環境ごとに確認が必要です。
+- Gemini を使うには Google AI Studio の Gemini API キー登録が必要です。
+- 初回配布時の SmartScreen 表示が出る場合があります。
