@@ -1,31 +1,27 @@
-# KotoType v0.9.13 試験版配布
+# KotoType v0.9.19 試験版配布
 
-公開日: 2026-10-03
+Windows 11 x64・Apple Silicon Mac向けの試験版です。Windows 10・Intel Macは対象外です。利用には運営者が承認したGoogleアカウントが必要です。
 
-Windows 11 x64 向けの試験版です。Windows 10 は対象外です。
+使い方は[こちら](USER_GUIDE.md)をご覧ください。
 
 ## この版で直したこと
 
-- ローカル整形時に「一旦」が「1旦」と扱われて安全ガードにより整形全体が破棄され、句読点が入らなくなる問題を修正しました。文章はローカル整形のまま貼り付けます。
-- 初回更新時に「録音中はスピーカーを消音」を有効化します。録音開始で既定の再生デバイスを消音し、終了時に開始前の消音状態へ戻します。設定画面で切り替えられます。
+- 初回設定と通常設定から、ローカル整形用データ約7.1GBを取得できるようにしました。
+- 全4ファイルのSHA-256を検証してから、ローカル整形を使用します。通信断や中断後は再開できます。
 
 ## 配布ファイル
 
-`KotoType_0.9.13_x64-setup.exe`
+- Windows 11: `KotoType_0.9.19_x64-setup.exe`
+- MシリーズMac: `KotoType_0.9.19_aarch64.dmg`
 
-SHA-256:
-`b0ad73c8d051a9dea5f04d0d7b1542e860f7795769a3eb4a40fa981687510133`
+[最新版のダウンロード](https://github.com/pandamarumarke-code/kototype-releases/releases/latest) / [SHA-256](SHA256SUMS.txt)
 
-[GitHub Releases: v0.9.13](https://github.com/pandamarumarke-code/kototype-releases/releases/tag/v0.9.13)
+ソースコードのZIPは不要です。上記のインストーラーまたはDMGを使ってください。
 
-PowerShell で確認する場合:
+## 確認済みの範囲と残件
 
-```powershell
-Get-FileHash .\KotoType_0.9.13_x64-setup.exe -Algorithm SHA256
-```
-
-## 未完了の確認
-
-- 実マイクでの長文入力、整形結果、録音中のスピーカー消音と復帰は、利用環境ごとに確認が必要です。
+- Windowsではマイク入力・句読点・改行・録音中の消音と復帰・貼り付けを確認しています。新しい取得処理では、既存モデル7.1GBのSHA検証と公開配布先のRange応答、再開・取消・破損検出のテストを確認しました。
+- Mac実機での新規7.1GB取得から整形までの通し確認は未完了です。
+- 認識精度のCER 8%目標は未達であり、誤認識や固有名詞の誤りが残る場合があります。重要な文章は送信前に確認してください。
 - Gemini を使うには Google AI Studio の Gemini API キー登録が必要です。
-- 初回配布時の SmartScreen 表示が出る場合があります。
+- Windows版は未署名、Mac版は未署名・未公証です。初回OS警告の解除と、マイク・Macのアクセシビリティ許可が必要です。
