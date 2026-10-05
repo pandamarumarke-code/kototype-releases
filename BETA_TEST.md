@@ -1,4 +1,4 @@
-# KotoType v0.9.19 試験版配布
+# KotoType v0.9.20 試験版配布
 
 Windows 11 x64・Apple Silicon Mac向けの試験版です。Windows 10・Intel Macは対象外です。利用には運営者が承認したGoogleアカウントが必要です。
 
@@ -6,13 +6,16 @@ Windows 11 x64・Apple Silicon Mac向けの試験版です。Windows 10・Intel 
 
 ## この版で直したこと
 
+- Gemini APIキー欄を常設し、キー単体の保存を追加。
+- 辞書のアプリ内編集・削除と全幅表示を追加。初期配布辞書は空へ変更。
+
 - 初回設定と通常設定から、ローカル整形用データ約7.1GBを取得できるようにしました。
 - 全4ファイルのSHA-256を検証してから、ローカル整形を使用します。通信断や中断後は再開できます。
 
 ## 配布ファイル
 
-- Windows 11: `KotoType_0.9.19_x64-setup.exe`
-- MシリーズMac: `KotoType_0.9.19_aarch64.dmg`
+- Windows 11: `KotoType_0.9.20_x64-setup.exe`
+- MシリーズMac: `KotoType_0.9.20_aarch64.dmg`
 
 [最新版のダウンロード](https://github.com/pandamarumarke-code/kototype-releases/releases/latest) / [SHA-256](SHA256SUMS.txt)
 
