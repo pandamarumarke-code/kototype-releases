@@ -4,6 +4,8 @@ Windows 11 x64・Apple Silicon Mac向けの試験版です。Windows 10・Intel 
 
 使い方は[こちら](USER_GUIDE.md)をご覧ください。
 
+Macを初めて設定する方は[Mac導入マニュアル](MAC_INSTALL.md)をご覧ください。ダウンロード・警告解除・ターミナルの開き方・権限設定を順に説明しています。
+
 ## この版で直したこと
 
 - Gemini APIキー欄を常設し、キー単体の保存を追加。

@@ -5,6 +5,7 @@ Windows 11 x64・Apple Silicon Mac向け日本語音声入力アプリの試験�
 現在は、運営者が事前に承認した Google アカウントに限って利用できます。Windows 10・Intel Macは対象外です。Windows版は未署名、Mac版は未署名・未公証です。
 
 - [最新版のダウンロード](https://github.com/pandamarumarke-code/kototype-releases/releases/latest)
+- [Mac導入マニュアル（警告解除・初回設定・最初の音声入力）](MAC_INSTALL.md)
 - [使い方・ローカル整形データの準備](USER_GUIDE.md)
 - [プライバシーポリシー](PRIVACY.md)
 - [利用規約](TERMS.md)

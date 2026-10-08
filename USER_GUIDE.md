@@ -1,12 +1,12 @@
-# KotoTypeの使い方（v0.9.19）
+# KotoTypeの使い方（v0.9.20）
 
 KotoTypeは、ショートカットで録音し、話した内容を入力欄へ貼り付けるアプリです。
 
 ## インストール
 
-Windows 11は`KotoType_0.9.19_x64-setup.exe`を実行します。初回警告が出た場合は配布元を確認し、「詳細情報」→「実行」を選びます。
+Windows 11は`KotoType_0.9.20_x64-setup.exe`を実行します。初回警告が出た場合は配布元を確認し、「詳細情報」→「実行」を選びます。
 
-Apple Silicon Macは`KotoType_0.9.19_aarch64.dmg`を開き、KotoTypeをアプリケーションフォルダへ移してください。そこからKotoTypeを起動します。
+Apple Silicon Macは`KotoType_0.9.20_aarch64.dmg`を開き、KotoTypeをアプリケーションフォルダへ移してください。そこからKotoTypeを起動します。手順を詳しく説明した[Mac導入マニュアル](MAC_INSTALL.md)も用意しています。
 
 Mac版は未署名・未公証です。初回起動をブロックされたら、システム設定 → プライバシーとセキュリティの下部でKotoTypeの「このまま開く」を選び、続く確認画面で「開く」を押します。[Appleの説明](https://support.apple.com/ja-jp/102445)も参照できます。
 
