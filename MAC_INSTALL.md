@@ -1,6 +1,6 @@
 # KotoType：Mac導入マニュアル
 
-確認日：2026年10月8日／配布版：0.9.20。Macに不慣れな方へ、インストールから最初の音声入力までを説明します。
+確認日：2026年10月9日／配布版：0.9.21。Macに不慣れな方へ、インストールから最初の音声入力までを説明します。
 
 ## 1. 用意するもの
 
@@ -14,7 +14,7 @@ Mac版は未署名・未公証の試験版です。Appleによる安全性の確
 ## 2. ダウンロードして「アプリケーション」へ入れる
 
 1. [最新版のダウンロードページ](https://github.com/pandamarumarke-code/kototype-releases/releases/latest)を開きます。
-2. ページ下部の「Assets」（配布ファイル）を開き、名前の末尾が **`_aarch64.dmg`** のファイルをクリックします。0.9.20では `KotoType_0.9.20_aarch64.dmg` です。
+2. ページ下部の「Assets」（配布ファイル）を開き、名前の末尾が **`_aarch64.dmg`** のファイルをクリックします。0.9.21では `KotoType_0.9.21_aarch64.dmg` です。
 3. ダウンロードが終わったら、Finder（Dockにある青い顔のアイコン）→「ダウンロード」で、そのDMGをダブルクリックします。
 4. 開いた画面の **KotoTypeアイコンを「Applications」へドラッグ**します。Applicationsは「アプリケーション」フォルダのことです。同名アプリを置き換える場合は、先に起動中のKotoTypeを終了してください。
 5. コピーが終わったら、Finderのサイドバーで「アプリケーション」を開き、そこにある **KotoTypeをダブルクリック**します。
@@ -48,7 +48,7 @@ Mac版は未署名・未公証の試験版です。Appleによる安全性の確
 3. 次の行をコピーして貼り付け、Returnを押します。ファイル名が違う場合は、実際にダウンロードした名前へ変更してください。
 
 ```sh
-shasum -a 256 "$HOME/Downloads/KotoType_0.9.20_aarch64.dmg"
+shasum -a 256 "$HOME/Downloads/KotoType_0.9.21_aarch64.dmg"
 ```
 
 4. 表示された先頭の長い英数字を、配布ページの [SHA256SUMS.txt](https://github.com/pandamarumarke-code/kototype-releases/blob/main/SHA256SUMS.txt) の同じDMG名の値と比較します。一致しなければ解除せず、配布元からダウンロードし直してください。
